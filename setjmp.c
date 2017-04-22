@@ -1,4 +1,4 @@
-#include"csapp.c"
+#include"csapp.h"
 jmp_buf buf;
 int error1=0;
 int error2=1;
@@ -6,7 +6,7 @@ int error2=1;
 void foo(void),bar(void);
 int main()
 {
-	switch(setjump(buf))
+	switch(setjmp(buf))
 	{
 		case 0:
 			foo();
